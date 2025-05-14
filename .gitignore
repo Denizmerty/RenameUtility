@@ -1,0 +1,38 @@
+﻿# Visual Studio / C++ specific
+*.vcxproj.user
+*.suo
+*.user
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+ipch/
+.vs/
+
+# Build output folders
+[Bb]in/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+Win32/
+ARM64/
+
+# NuGet Packages
+packages/
+*.nupkg
+# If you are using PackageReference, NuGetLockfile is generated next to the project file.
+# *.nuget.props
+# *.nuget.targets
+
+# Release artifacts (if not managed via GitHub Releases)
+releases/
+
+# Other common ignores
+*.log
+*.tlog
+*.ilk
+*.pdb
+*.obj
+*.pch
+*.res
