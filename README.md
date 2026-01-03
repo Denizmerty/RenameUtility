@@ -4,7 +4,29 @@ So, even though that PowerShell snippet gets the renaming order right for increm
 
 # File Renamer Utility
 
-**Version:** 1.0.0
+**Version:** 1.1.0
+
+## What's New in v1.1.0
+
+### New Placeholders
+- `<parent_dir>` - Parent folder name
+- `<random:N>` - N random alphanumeric characters (max 64)
+- `<file_size>` - File size in bytes
+- `<file_size_kb>` - File size in KB
+- `<modified_date>` - File modification date (YYYYMMDD)
+
+### New Features
+- **Progress Bar** - Visual feedback during operations
+- **Keyboard Shortcuts** - `Ctrl+P` (Preview), `Ctrl+R` (Rename), `Ctrl+S` (Save Profile), `Ctrl+L` (Load Profile)
+- **Regex Find/Replace** - "Use Regex" checkbox for pattern matching
+- **CSV Export** - File → Export Preview to CSV
+- **Conflict Detection** - Highlights conflicting renames in red
+- **Column Sorting** - Click preview list headers to sort
+- **Real-time Preview** - Auto-updates preview as you type (500ms debounce)
+- **Multi-level Undo** - Up to 10 levels of undo history
+- **Rename History Log** - Logs all operations to `%APPDATA%\RenameUtility\rename_history.log`
+
+---
 
 File Renamer Utility is a comprehensive GUI application designed for batch renaming files with a rich set of features. It offers two main modes of operation: scanning a directory for files or manually selecting files. The utility provides powerful renaming capabilities through customizable patterns, find/replace, case conversion, and numeric sequencing, all while prioritizing safety with preview, backup, and undo functionalities.
 
@@ -108,6 +130,11 @@ The "New Naming Pattern" field supports the following placeholders:
 **Common(Both Modes):**
 *   `<orig_name>`: The original filename without the extension.
 *   `<ext>` or `<orig_ext>`: The original file extension(including the dot, e.g., `.jpg`).
+*   `<parent_dir>`: The name of the parent directory containing the file.
+*   `<random:N>`: N random alphanumeric characters (e.g., `<random:8>` generates 8 random chars, max 64).
+*   `<file_size>`: The file size in bytes.
+*   `<file_size_kb>`: The file size in kilobytes.
+*   `<modified_date>`: The file's last modification date (YYYYMMDD format).
 *   `<YYYY>`: Current year(4 digits).
 *   `<MM>`: Current month(01-12).
 *   `<DD>`: Current day(01-31).
