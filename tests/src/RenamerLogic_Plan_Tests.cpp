@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "TestFixtures.h"
-#include "../RenameUtility/RenamerLogic.h"
+#include "../../src/Logic/RenamerLogic.h"
 #include <vector>
 #include <optional>
 
